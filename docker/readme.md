@@ -64,12 +64,9 @@ docker system events
 
 cd ../hello-world-nodejs/
 docker build -t topkuber/hello-world-nodejs:0.0.2.RELEASE .
-docker container run -d -p 5000:5000 topkuber/hello-world-nodejs:0.0.2.RELEASE
+docker container run -d -p 6000:6000 topkuber/hello-world-nodejs:0.0.2.RELEASE
 docker push topkuber/hello-world-nodejs:0.0.2.RELEASE
 
-docker run -d -p 5001:5000 topkuber/hello-world-nodejs:0.0.3.RELEASE ping google.com
-
-```
 
 docker build -t topkuber/hello-world-nodejs:0.0.1.RELEASE .
 docker push topkuber/hello-world-nodejs:0.0.1.RELEASE
