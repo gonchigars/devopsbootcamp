@@ -75,18 +75,6 @@ docker push topkuber/hello-world-nodejs:0.0.2.RELEASE
 
 docker run -d -p 5001:5000 topkuber/hello-world-nodejs:0.0.3.RELEASE ping google.com
 
-docker network ls
-docker network inspect bridge
-
-docker run -d -p 8100:8100 --env CURRENCY_EXCHANGE_SERVICE_HOST=http://currency-exchange --name=currency-conversion --link currency-exchange topkuber/currency-conversion:0.0.1-RELEASE
-
-docker network create currency-network
-docker container stop currency-exchange
-docker container stop currency-conversion
-docker run -d -p 8000:8000 --name=currency-exchange --network=currency-network topkuber/currency-exchange:0.0.1-RELEASE
-docker run -d -p 8100:8100 --env CURRENCY_EXCHANGE_SERVICE_HOST=http://currency-exchange --name=currency-conversion --network=currency-network topkuber/currency-conversion:0.0.1-RELEASE
-
-
 ```
 
 docker build -t topkuber/hello-world-nodejs:0.0.1.RELEASE .
