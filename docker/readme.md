@@ -67,10 +67,6 @@ docker build -t topkuber/hello-world-nodejs:0.0.2.RELEASE .
 docker container run -d -p 6000:6000 topkuber/hello-world-nodejs:0.0.2.RELEASE
 docker push topkuber/hello-world-nodejs:0.0.2.RELEASE
 
-
-docker build -t topkuber/hello-world-nodejs:0.0.1.RELEASE .
-docker push topkuber/hello-world-nodejs:0.0.1.RELEASE
-
 ```
 
 ```
